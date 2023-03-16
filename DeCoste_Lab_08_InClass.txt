@@ -1,0 +1,14 @@
+2/c DeCoste
+
+1. Miles Tran, Jake Carpenter, Charles Young, Myles Decoste
+
+2. milestgg/lab08group github
+
+3. I committed this file with the In Class Writeup...
+
+4. Chess Game, Basic Ping Pong Game, Minesweeper Game
+
+5.
+
+Languages: For all of them, Javascript, Python, C++, and can be implemented with the QT Framework would make it easy to make classes for each game, and go from there. 
+There are also a lot of chess libraries out there, such as Chess.js, and Chessboard.js.

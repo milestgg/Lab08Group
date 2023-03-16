@@ -1,0 +1,18 @@
+List the members that you will be working with for lab 8:
+Myles Decoste, Jake Carpenter, Miles Tran
+
+Decide on and list the location of a single github repository that will contain code contributions from all team members for the integration portion of Lab 8:
+https://github.com/milestgg/Lab08Group
+
+Perform at least one test (or actual) commit to the repository above:
+Done
+
+Brainstorm at least three project ideas that you are interested in pursuing for the second half of the semester as part of the group project. Although details of the project have not been released, this is simply an exercise to identify what you are interested in personally and professionally:
+Platformer game
+Animated and interactive desktop background
+Ad blocker
+
+In connection with the ideas in the previous step, research programming languages, frameworks, or libraries that could be used to implement each of the projects.
+platformer game: cpp/raylib
+desktop: windows api
+adblocker: html,css,?

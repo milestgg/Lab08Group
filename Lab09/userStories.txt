@@ -1,0 +1,9 @@
+User wants to enter a password to check its strength and security
+
+User wants to see specific feedback about password to make it more secure
+
+User wants to compare to a list of known passwords to make sure it is not too common
+
+User wants to be able to change the minimum password length requirement to meet future standards
+
+User wants to be 

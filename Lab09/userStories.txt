@@ -1,9 +1,13 @@
-User wants to enter a password to check its strength and security
+As a normal user I want to enter a password to check its strength and security.
 
-User wants to see specific feedback about password to make it more secure
+As a normal user I want to see specific feedback about my password to make it more secure.
 
-User wants to compare to a list of known passwords to make sure it is not too common
+As a normal user I want to compare to a list of known passwords to make sure it is not too common.
 
-User wants to be able to change the minimum password length requirement to meet future standards
+As a normal user I want to be able to change the minimum password length requirement to meet future standards.
 
-User wants to be 
+As a normal user I want to be able to change to source of query/comparison data to update the commmon password list.
+
+As a normal user I want to see the application's version to check that I have the right version installed.
+
+As an administrtor I want to be able to see errors logged to the file system to fix potential problems in the future.

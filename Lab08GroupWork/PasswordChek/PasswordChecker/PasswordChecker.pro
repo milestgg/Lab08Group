@@ -10,10 +10,12 @@ CONFIG += c++17
 
 SOURCES += \
     main.cpp \
-    passwordchecker.cpp
+    passwordchecker.cpp \
+    passwordvalidator.cpp
 
 HEADERS += \
-    passwordchecker.h
+    passwordchecker.h \
+    passwordvalidator.h
 
 FORMS += \
     passwordchecker.ui

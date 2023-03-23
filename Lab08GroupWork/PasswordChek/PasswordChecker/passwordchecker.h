@@ -17,6 +17,7 @@ class PasswordChecker : public QMainWindow
 public:
     PasswordChecker(QWidget *parent = nullptr);
     ~PasswordChecker();
+    QList<QString> hashedList;
 
     //name private slots...
 private slots:

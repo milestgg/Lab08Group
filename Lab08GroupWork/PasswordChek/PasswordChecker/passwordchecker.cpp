@@ -3,12 +3,26 @@
 #include <QCryptographicHash>
 #include <QMessageBox>
 #include <QStringList>
+#include <QDir>
 
 PasswordChecker::PasswordChecker(QWidget *parent) :
     QMainWindow(parent),
     ui(new Ui::PasswordChecker)
 {
     ui->setupUi(this);
+
+    QDir::setCurrent("..");
+    QFile inputFile("10kMostCommon.txt");
+    if (inputFile.open(QIODevice::ReadOnly))
+    {
+       QTextStream in(&inputFile);
+       while (!in.atEnd()) {
+            QString line = in.readLine();
+            QString hashedLine = QString(QCryptographicHash::hash((line.toUtf8()),QCryptographicHash::Md5).toHex());
+            hashedList.append(hashedLine);
+       }
+       inputFile.close();
+    }
 }
 
 PasswordChecker::~PasswordChecker()
@@ -152,19 +166,11 @@ void PasswordChecker::on_Hash_ComplexityButton_clicked()
 void PasswordChecker::on_Hash_CompareButton_clicked()
 {
     QString password = ui->Password_Input->text();
-    QByteArray hash = calculatePasswordHash(password);
-    // Check password against list of compromised passwords
-    QStringList compromisedPasswords = {"password", "12345", "123456", "babababab", "abcdef"};
-    QList<QByteArray> compromisedPasswordsHashed;
-    //Change compromised password list to hashes...Can add more later if wanted.
-    for (const auto &password : compromisedPasswords) {
-        compromisedPasswordsHashed.append(QCryptographicHash::hash(password.toUtf8(), QCryptographicHash::Sha256));
-    }
-      if (compromisedPasswordsHashed.contains(hash)) {
+    QString hashedPassword = QString(QCryptographicHash::hash((password.toUtf8()),QCryptographicHash::Md5).toHex());
+      if (hashedList.contains(hashedPassword)) {
             QMessageBox::warning(this, tr("Warning"), tr("Password is compromised. Make it a different password."));
             return;
         }
-
       else
       {
           QMessageBox::information(this, tr("Success"), tr("Password seems legit!"));
